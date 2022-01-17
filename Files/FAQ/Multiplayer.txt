@@ -1,0 +1,10 @@
+
+Multiplayer:
+
+1. Is multiplayer still trash? No, it has gotten way better.
+
+2. I can't connect to my friends save gamepass to gamepass, how can I fix this? Make sure both internet can handle connection, try playing multiplayer in another game to test. Try rebooting. Make sure your NAT on both networks are open. There are plenty of tutorials on youtube on how to open your NAT.
+
+3. If I am on steam, and a friend on xbox or vice versa, can we play together? Unless you are renting a server, sadly no. However, you can get the xbox version of the game for pc.
+
+Learn more at: [https://astroneer.fandom.com/wiki/Multiplayer](https://astroneer.fandom.com/wiki/Multiplayer)

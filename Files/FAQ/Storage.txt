@@ -1,0 +1,8 @@
+
+Storage: 
+
+1. What's the best storage option? The best storage is on platforms with whatever storage you can build. Putting items on the ground may result in them falling into a cave layer.
+
+2. Help! I put an item on the ground and now it's gone! What do I do? It most likely fell into a cave layer below, you can either try to find it, or move on.
+
+Learn more at: [https://astroneer.fandom.com/wiki/Storages](https://astroneer.fandom.com/wiki/Storages)
