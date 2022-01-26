@@ -1,0 +1,8 @@
+
+XL Landing Pad:
+
+1. What is [this](https://preview.redd.it/r12iq1f2bpd81.jpg?width=960&crop=smart&auto=webp&s=98b04c32feb70a74cd401eecb2fd78ae37d59b28)? It's a no longer functional landing pad that has three large item slots and can pass through power.
+
+2. Where can I find it? It used to only be found on desolo, but now is found on every planet.
+
+3. Can I land on it from space? Unfortunatly, SES removed this capability, it used to be when powered you would be able to land on it and it would provide oxygen.

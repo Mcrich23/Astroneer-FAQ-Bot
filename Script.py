@@ -2,6 +2,8 @@ from typing import Text
 import praw
 import pickle
 import time
+import asyncio
+import aioconsole
 from threading import Thread
 
 filename = 'Files/commentsRepliedTo.pk'
@@ -55,9 +57,10 @@ def getFAQ(mention):#, completion):
                                     with open('Files/FAQ/Storage.txt') as storage:
                                         with open('Files/FAQ/Storms.txt') as storms:
                                             with open('Files/FAQ/Ending.txt') as ending:
-                                                #return(f"Astroneer FAQ:\n\n{a.read()}\n\n{marbles.read()}\n\n{multiplayer.read()}\n\n{power.read()}\n\n{scrap.read()}\n\n{storage.read()}\n\n{storms.read()}\n\n{ending.read()}")
-                                                done = (f"Astroneer FAQ:\n\n{a.read()}\n\n{marbles.read()}\n\n{multiplayer.read()}\n\n{power.read()}\n\n{scrap.read()}\n\n{storage.read()}\n\n{storms.read()}\n\n{ending.read()}")
-                                                return done
+                                                with open('Files/FAQ/Landing Pad.txt') as pad:
+                                                    #return(f"Astroneer FAQ:\n\n{a.read()}\n\n{marbles.read()}\n\n{multiplayer.read()}\n\n{power.read()}\n\n{scrap.read()}\n\n{storage.read()}\n\n{storms.read()}\n\n{ending.read()}")
+                                                    done = (f"Astroneer FAQ:\n\n{a.read()}\n\n{marbles.read()}\n\n{multiplayer.read()}\n\n{power.read()}\n\n{scrap.read()}\n\n{storage.read()}\n\n{storms.read()}\n\n{ending.read()}\n\n{pad.read()}")
+                                                    return done
 def runMentions():
     #print("fetching FAQ.txt...")
     #with open('FAQ.txt') as f:
@@ -93,6 +96,11 @@ def runMentions():
                     with open('Files/FAQ/Ending.txt') as e:
                         mention.reply(f"Astroneer FAQ:\n\n{f.read()}\n\n{e.read()}")
                         print(f"replied: {capBody} FAQ")
+            elif "Xl landing pad" in capBody or "Xl pad" in capBody or "Extra large landing pad" in capBody or "Extra large pad" in capBody or "Large landing pad" in capBody or "Large pad" in capBody:
+                with open('Files/FAQ/Landing Pad.txt') as f:
+                    with open('Files/FAQ/Ending.txt') as e:
+                        mention.reply(f"Astroneer FAQ:\n\n{f.read()}\n\n{e.read()}")
+                        print(f"replied: {capBody} FAQ")
             else:
                 with open('Files/FAQ/Achievements.txt') as a:
                     with open('Files/FAQ/Marbles.txt') as marbles:
@@ -102,10 +110,11 @@ def runMentions():
                                     with open('Files/FAQ/Storage.txt') as storage:
                                         with open('Files/FAQ/Storms.txt') as storms:
                                             with open('Files/FAQ/Ending.txt') as ending:
-                                                #return(f"Astroneer FAQ:\n\n{a.read()}\n\n{marbles.read()}\n\n{multiplayer.read()}\n\n{power.read()}\n\n{scrap.read()}\n\n{storage.read()}\n\n{storms.read()}\n\n{ending.read()}")
-                                                done = (f"Astroneer FAQ:\n\n{a.read()}\n\n{marbles.read()}\n\n{multiplayer.read()}\n\n{power.read()}\n\n{scrap.read()}\n\n{storage.read()}\n\n{storms.read()}\n\n{ending.read()}")
-                                                mention.reply(done)
-                                                print(f"replied Full FAQ")
+                                                with open('Files/FAQ/Landing Pad.txt') as pad:
+                                                    #return(f"Astroneer FAQ:\n\n{a.read()}\n\n{marbles.read()}\n\n{multiplayer.read()}\n\n{power.read()}\n\n{scrap.read()}\n\n{storage.read()}\n\n{storms.read()}\n\n{ending.read()}")
+                                                    done = (f"Astroneer FAQ:\n\n{a.read()}\n\n{marbles.read()}\n\n{multiplayer.read()}\n\n{power.read()}\n\n{scrap.read()}\n\n{storage.read()}\n\n{storms.read()}\n\n{pad.read()}\n\n{ending.read()}")
+                                                    mention.reply(done)
+                                                    print(f"replied Full FAQ")
             #getFAQ(mention, completion=mention.reply(getFAQ()))
             #mention.reply(f"u/{mention.author} here you go.\n\n{replyMessage}")
     #callWait()
@@ -164,13 +173,10 @@ def checkCommands():
         checkVotes()
 
 def run():
-    while True:
-        if __name__ == '__main__':
+    if __name__ == '__main__':
             Thread(target = checkCommands).start()
-        if commentsRepliedTo != []:
-            runMentions()
-            runComments()
-        else:
-            print("Waiting for commentsRepliedTo to populate...")
+    while True:
+        runMentions()
+        runComments()
 
 run()
