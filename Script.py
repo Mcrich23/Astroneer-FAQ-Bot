@@ -2,8 +2,6 @@ from typing import Text
 import praw
 import pickle
 import time
-import asyncio
-import aioconsole
 from threading import Thread
 
 filename = 'Files/commentsRepliedTo.pk'
