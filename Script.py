@@ -1,6 +1,7 @@
 from typing import Text
 import praw
 import pickle
+import reddit_secrets
 import time
 from threading import Thread
 
@@ -14,11 +15,11 @@ blacklist = ["Title Of Your Sextape", "Title Of Your Sex tape", "title of your s
 #    replyMessage = f.readlines()
 print("Starting Bot...")
 reddit = praw.Reddit(
-    user_agent="astroneerfaqv1",
-    client_id="Ae8uA0bGBIr6Ch4SDk6j2Q",
-    client_secret="9vqY61P1SlK-QvtovGPffN4d2p3-mQ",
-    username="Astroneer-FAQ",
-    password="seattle1AF"
+    user_agent=reddit_secrets.user_agent,
+    client_id=reddit_secrets.client_id,
+    client_secret=reddit_secrets.client,
+    username=reddit_secrets.username,
+    password=reddit_secrets.password
 )
 def callWait():
     print("Waiting 5 minutes before next call...")
