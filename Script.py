@@ -17,7 +17,7 @@ print("Starting Bot...")
 reddit = praw.Reddit(
     user_agent=reddit_secrets.user_agent,
     client_id=reddit_secrets.client_id,
-    client_secret=reddit_secrets.client,
+    client_secret=reddit_secrets.client_secret,
     username=reddit_secrets.username,
     password=reddit_secrets.password
 )
