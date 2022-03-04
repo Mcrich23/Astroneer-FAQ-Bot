@@ -177,5 +177,9 @@ def run():
     while True:
         runMentions()
         runComments()
-
-run()
+try:
+    run()
+except:
+    print("Something went wrong")
+    print("Retrying...")
+    run()
