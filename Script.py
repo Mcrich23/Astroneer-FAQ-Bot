@@ -60,25 +60,16 @@ def getFAQ(mention):#, completion):
                                                     done = (f"Astroneer FAQ:\n\n{a.read()}\n\n{marbles.read()}\n\n{multiplayer.read()}\n\n{power.read()}\n\n{scrap.read()}\n\n{storage.read()}\n\n{storms.read()}\n\n{ending.read()}\n\n{pad.read()}")
                                                     return done
 def runMentions():
-    #print("fetching FAQ.txt...")
-    #with open('FAQ.txt') as f:
-    #    replyMessage = f.read()
-        #print(f"replyMessage = {replyMessage}")
     print("fetching mentions:")
     for mention in inbox.mentions(limit=25):
-        #print(f"{mention.author}\n{mention.body}\n")
-        #print(f"commentsRepliedTo = {commentsRepliedTo}")
         if not mention.new or mention.id in commentsRepliedTo:
             mention.mark_read()
-            #print(f"{mention.submission.url} Already responded")
         else:
             print("replying...")
             mention.mark_read()
-        #if mention.id not in commentsRepliedTo:
             print(f"{mention.author}\n{mention.body}\n")
             commentsRepliedTo.append(mention.id)
             commentsRepliedTo.append(mention.body)
-            print(f"commentsRepliedTo = {commentsRepliedTo}")
             with open(filename, 'wb') as fi:
                 # dump your data into the file
                 pickle.dump(commentsRepliedTo, fi)
@@ -115,9 +106,6 @@ def runMentions():
                                                     done = (f"Astroneer FAQ:\n\n{a.read()}\n\n{marbles.read()}\n\n{multiplayer.read()}\n\n{power.read()}\n\n{scrap.read()}\n\n{storage.read()}\n\n{storms.read()}\n\n{pad.read()}\n\n{ending.read()}")
                                                     mention.reply(done)
                                                     print(f"replied Full FAQ")
-            #getFAQ(mention, completion=mention.reply(getFAQ()))
-            #mention.reply(f"u/{mention.author} here you go.\n\n{replyMessage}")
-    #callWait()
     print("Waiting 10 seconds before next mentions call...")
     time.sleep(5)
 
@@ -126,14 +114,12 @@ def runComments():
     for comment in comments(limit=25):
         if not comment.new or comment.id in commentsRepliedTo:
             comment.mark_read()
-            #print(f"{comment.submission.url} Already replied")
         else:
             print(f"replying...")
             comment.mark_read()
             print(f"{comment.author}\n{comment.body}\n")
             commentsRepliedTo.append(comment.id)
             commentsRepliedTo.append(comment.body)
-            print(f"commentsRepliedTo = {commentsRepliedTo}")
             body = f"{comment.body}"
             capitalize = body.capitalize()
             with open(filename, 'wb') as fi:
@@ -156,9 +142,6 @@ def runComments():
                         pickle.dump(int(count) + 1, wv)
                 comment.reply("We're sorry you had a bad experience, please let us know how to improve by dming me.")
             checkVotes()
-            #getFAQ(mention, completion=mention.reply(getFAQ()))
-            #mention.reply(f"u/{mention.author} here you go.\n\n{replyMessage}")
-    #callWait()
     print("Waiting 10 seconds before next comments call...")
     time.sleep(5)
 
