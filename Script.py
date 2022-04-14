@@ -72,7 +72,7 @@ def runMentions():
             mention.mark_read()
             #print(f"{mention.submission.url} Already responded")
         else:
-            print(f"replying to {mention.author}...")
+            print("replying...")
             mention.mark_read()
         #if mention.id not in commentsRepliedTo:
             print(f"{mention.author}\n{mention.body}\n")
@@ -128,7 +128,7 @@ def runComments():
             comment.mark_read()
             #print(f"{comment.submission.url} Already replied")
         else:
-            print(f"replying to {comment.author}...")
+            print(f"replying...")
             comment.mark_read()
             print(f"{comment.author}\n{comment.body}\n")
             commentsRepliedTo.append(comment.id)
