@@ -70,9 +70,9 @@ def runMentions():
         #print(f"commentsRepliedTo = {commentsRepliedTo}")
         if not mention.new or mention.id in commentsRepliedTo:
             mention.mark_read()
-            print(f"{mention.submission.url} Already responded")
+            #print(f"{mention.submission.url} Already responded")
         else:
-            print("replying...")
+            print(f"replying to {mention.author}...")
             mention.mark_read()
         #if mention.id not in commentsRepliedTo:
             print(f"{mention.author}\n{mention.body}\n")
@@ -126,9 +126,9 @@ def runComments():
     for comment in comments(limit=25):
         if not comment.new or comment.id in commentsRepliedTo:
             comment.mark_read()
-            print(f"{comment.submission.url} Already replied")
+            #print(f"{comment.submission.url} Already replied")
         else:
-            print("replying...")
+            print(f"replying to {comment.author}...")
             comment.mark_read()
             print(f"{comment.author}\n{comment.body}\n")
             commentsRepliedTo.append(comment.id)
