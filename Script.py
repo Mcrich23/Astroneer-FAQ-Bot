@@ -13,7 +13,6 @@ blacklist = ["Title Of Your Sextape", "Title Of Your Sex tape", "title of your s
 #replyMessage = f""
 #with open('FAQ.txt') as f:
 #    replyMessage = f.readlines()
-print("Starting Bot...")
 reddit = praw.Reddit(
     user_agent=reddit_secrets.user_agent,
     client_id=reddit_secrets.client_id,
@@ -182,6 +181,7 @@ def run():
         runMentions()
         runComments()
 try:
+    print("Starting Bot...")
     run()
 except:
     print("Something went wrong")

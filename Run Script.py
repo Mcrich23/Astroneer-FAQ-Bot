@@ -1,0 +1,3 @@
+import Script
+
+Script.run()

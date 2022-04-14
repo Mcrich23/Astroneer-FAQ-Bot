@@ -1,0 +1,5 @@
+user_agent="astroneerfaqv1"
+client_id="Ae8uA0bGBIr6Ch4SDk6j2Q"
+client_secret="9vqY61P1SlK-QvtovGPffN4d2p3-mQ"
+username="Astroneer-FAQ"
+password="seattle1AF"
