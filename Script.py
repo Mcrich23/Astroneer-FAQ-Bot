@@ -69,10 +69,12 @@ def runMentions():
     for mention in inbox.mentions(limit=25):
         #print(f"{mention.author}\n{mention.body}\n")
         #print(f"commentsRepliedTo = {commentsRepliedTo}")
-        if mention.id in commentsRepliedTo:
+        if not mention.new or mention.id in commentsRepliedTo:
+            mention.mark_read()
             print(f"{mention.submission.url} Already responded")
         else:
             print("replying...")
+            mention.mark_read()
         #if mention.id not in commentsRepliedTo:
             print(f"{mention.author}\n{mention.body}\n")
             commentsRepliedTo.append(mention.id)
@@ -123,10 +125,12 @@ def runMentions():
 def runComments():
     print("fetching comments:")
     for comment in comments(limit=25):
-        if comment.id in commentsRepliedTo:
+        if not comment.new or comment.id in commentsRepliedTo:
+            comment.mark_read()
             print(f"{comment.submission.url} Already replied")
         else:
             print("replying...")
+            comment.mark_read()
             print(f"{comment.author}\n{comment.body}\n")
             commentsRepliedTo.append(comment.id)
             commentsRepliedTo.append(comment.body)
