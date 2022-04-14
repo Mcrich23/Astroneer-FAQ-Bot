@@ -1,1 +1,1 @@
-Script: python Script.py
+Script: python "Run Script.py"
