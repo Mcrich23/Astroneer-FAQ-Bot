@@ -7,4 +7,4 @@ XL Landing Pad:
 
 3. Can I land on it from space? Unfortunatly, SES removed this capability, it used to be when powered you would be able to land on it and it would provide oxygen.
 
-4. Isn't this from the old tutorial? Yes, yes it is. 
+4. Isn't this from the old tutorial? Yes, yes it is.
