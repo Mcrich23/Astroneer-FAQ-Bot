@@ -87,7 +87,7 @@ def runMentions():
                     with open('Files/FAQ/Ending.txt') as e:
                         mention.reply(f"Astroneer FAQ:\n\n{f.read()}\n\n{e.read()}")
                         print(f"replied: {capBody} FAQ")
-            elif "Xl landing pad" in capBody or "Xl pad" in capBody or "Extra large landing pad" in capBody or "Extra large pad" in capBody or "Large landing pad" in capBody or "Large pad" in capBody:
+            elif "Xl landing pad" in capBody or "Xl pad" in capBody or "Extra large landing pad" in capBody or "Extra large pad" in capBody or "Large landing pad" in capBody or "Large pad" in capBody or "Xl launch pad" in capBody or "Extra large launch pad" in capBody or "Large launch pad" in capBody:
                 with open('Files/FAQ/Landing Pad.txt') as f:
                     with open('Files/FAQ/Ending.txt') as e:
                         mention.reply(f"Astroneer FAQ:\n\n{f.read()}\n\n{e.read()}")
