@@ -77,7 +77,7 @@ def runMentions():
             request = body.capitalize().replace("U/astroneer-faq ", "")
             capBody = request.capitalize()
             print(f"CapBody = {capBody}")
-            if "Balls" in capBody or "Marbles" in capBody or "Ball" in capBody or "Marble" in capBody or "Ball" in capBody or "Marble" in capBody:
+            if "Balls" in capBody or "Marbles" in capBody or "LRDs" in capBody or "Liminal Recondite Devices" in capBody or "Ball" in capBody or "Marble" in capBody or "Ball" in capBody or "Marble" in capBody or "LRD" in capBody or "Liminal Recondite Device" in capBody:
                 with open('Files/FAQ/Marbles.txt') as f:
                     with open('Files/FAQ/Ending.txt') as e:
                         mention.reply(f"Astroneer FAQ:\n\n{f.read()}\n\n{e.read()}")

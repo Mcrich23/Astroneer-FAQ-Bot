@@ -5,6 +5,6 @@ XL Landing Pad:
 
 2. Where can I find it? It used to only be found on desolo, but now is found on every planet.
 
-3. Can I land on it from space? Yes
+3. Can I land on it from space? Yes, although SES is constantly changing this functionality. Hopefully it will stay as a viable launch location.
 
 4. Isn't this from the old tutorial? Yes, yes it is.
