@@ -4,6 +4,7 @@ import pickle
 import reddit_secrets
 import time
 from threading import Thread
+import sys
 
 filename = 'Files/commentsRepliedTo.pk'
 commentsRepliedTo = []
@@ -163,6 +164,8 @@ def run():
     while True:
         runMentions()
         runComments()
+
+sys.excepthook = run
 try:
     print("Starting Bot...")
     run()
