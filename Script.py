@@ -10,7 +10,6 @@ filename = 'Files/commentsRepliedTo.pk'
 commentsRepliedTo = []
 with open(filename, 'rb') as fi:
     commentsRepliedTo = pickle.load(fi)
-blacklist = ["Title Of Your Sextape", "Title Of Your Sex tape", "title of your sextape", "title of your sex tape", "Title of your sextape", "Title of your sextape", "Title of your sex movie", "Title Of Your Sex Movie"]
 #replyMessage = f""
 #with open('FAQ.txt') as f:
 #    replyMessage = f.readlines()
