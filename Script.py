@@ -164,11 +164,14 @@ def run():
         runMentions()
         runComments()
 
-sys.excepthook = run
+def exception_handler():
+    print("Something went wrong")
+    print("Retrying...")
+    run()
+
+sys.excepthook = exception_handler
 try:
     print("Starting Bot...")
     run()
 except:
-    print("Something went wrong")
-    print("Retrying...")
-    run()
+    exception_handler()
